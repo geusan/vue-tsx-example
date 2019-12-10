@@ -1,9 +1,11 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { VNode } from 'vue';
+import * as tsx from 'vue-tsx-support';
 
-@Component
-export class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-  public render() {
+export const HelloWorld = tsx.componentFactory.create({
+  props: {
+    msg: { type: String, required: true },
+  },
+  render(): VNode {
     return (
       <div class={'hello'}>
         <h1>{this.msg}</h1>
@@ -42,5 +44,5 @@ export class HelloWorld extends Vue {
         </ul>
       </div>
     );
-  }
-}
+  },
+});
