@@ -1,5 +1,6 @@
 import { VNode } from 'vue';
 import * as tsx from 'vue-tsx-support';
+import '../assets/stylus/components/HelloWorld.styl';
 
 export const HelloWorld = tsx.componentFactory.create({
   props: {
