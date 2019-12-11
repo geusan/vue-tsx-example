@@ -9,7 +9,6 @@ import { HelloWorld } from './components/HelloWorld';
 })
 export default class App extends Vue {
   public render() {
-    console.log(HelloWorld);
     return (
       <div id={'app'}>
         <img alt={'Vue logo'} src='/logo.png'/>
